@@ -16,7 +16,6 @@ public class Volumen : MonoBehaviour
     public void ChangeSlider(float valor)
     {
         sliderValue = valor;
-        PlayerPrefs.SetFloat("volumen", sliderValue);
         AudioListener.volume = sliderValue;
         IfMuted();
     }
@@ -30,5 +29,9 @@ public class Volumen : MonoBehaviour
         {
             muteImage.enabled = false;
         }
+    }
+    public void SaveVolume()
+    {
+        PlayerPrefs.SetFloat("volumen", sliderValue);
     }
 }
