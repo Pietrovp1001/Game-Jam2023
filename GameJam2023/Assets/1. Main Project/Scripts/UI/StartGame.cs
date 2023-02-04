@@ -11,6 +11,7 @@ public class StartGame : MonoBehaviour
     public GameObject SectionA;
     public PlayableDirector StartCinematic;
     public Animator Music01;
+    public GameObject Music02; 
     public void GameStart()
     {
         SectionACanvas.interactable = false; 
@@ -23,7 +24,7 @@ public class StartGame : MonoBehaviour
         Music01.SetTrigger("FadeOutMusic");
         SectionACanvas.interactable = false; 
         yield return new WaitForSeconds(0.6f);
-       
+        Music02.SetActive(true);
         StartCinematic.Play();
         
     }
