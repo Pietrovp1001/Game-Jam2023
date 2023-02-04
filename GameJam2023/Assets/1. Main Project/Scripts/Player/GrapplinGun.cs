@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -8,7 +10,7 @@ public class GrapplinGun : MonoBehaviour {
 
     private LineRenderer lr;
     private Vector3 grapplePoint;
-    public LayerMask whatIsGrappleable;
+    public LayerMask whatIsGrappleable, unlockGrappleable;
     public Transform gunTip, camera, player;
     private float maxDistance = 50f;
     private SpringJoint joint;
@@ -16,7 +18,7 @@ public class GrapplinGun : MonoBehaviour {
     public float minCuerda = 0.25f;
     public float spring, damper, massScale;
     public Image crossHair;
-    
+    public GameObject meshObject;
 
     void Awake() {
         lr = GetComponent<LineRenderer>();
@@ -26,11 +28,13 @@ public class GrapplinGun : MonoBehaviour {
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
             StartGrapple();
+           
         }
+        
         else if (Input.GetMouseButtonUp(0)) {
             StopGrapple();
         }
-
+        
         if (IsGrappling()) {
             
             crossHair.GetComponent<Image>().color = Color.green;
@@ -57,6 +61,8 @@ public class GrapplinGun : MonoBehaviour {
             joint.autoConfigureConnectedAnchor = false;
             joint.connectedAnchor = grapplePoint;
 
+            
+
             float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
 
             //The distance grapple will try to keep from grapple point. 
@@ -68,16 +74,23 @@ public class GrapplinGun : MonoBehaviour {
             joint.spring = spring;
             joint.damper = damper;
             joint.massScale = massScale;
-
+            
             lr.positionCount = 2;
             currentGrapplePosition = gunTip.position;
+
+            
+            if (hit.transform.GetComponent<PlatformUnlocker>() != null)
+            {
+                hit.transform.GetComponent<PlatformUnlocker>().UnlockPlatforms();
+                hit.transform.GetComponent<DissolveScript>().StartCoroutine("MakeDissolve");
+            }
+            
+            
         }
     }
+        
+    
 
-
-    /// <summary>
-    /// Call whenever we want to stop a grapple
-    /// </summary>
     void StopGrapple() {
         lr.positionCount = 0;
         Destroy(joint);
@@ -94,7 +107,7 @@ public class GrapplinGun : MonoBehaviour {
         lr.SetPosition(0, gunTip.position);
         lr.SetPosition(1, currentGrapplePosition);
     }
-
+    
     public bool IsGrappling() {
         return joint != null;
     }
