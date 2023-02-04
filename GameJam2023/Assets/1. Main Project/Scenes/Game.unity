@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 2275158}
   - component: {fileID: 2275157}
   - component: {fileID: 2275156}
+  - component: {fileID: 2275159}
   m_Layer: 5
   m_Name: Opciones
   m_TagString: Untagged
@@ -206,7 +207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2275157}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2275159}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: HideSection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2275157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +258,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2275154}
   m_CullTransparentMesh: 1
+--- !u!114 &2275159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2275154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38cbb7b5a05c28479376c32bc4a6031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SectionACanvas: {fileID: 1843763277}
+  SectionBCanvas: {fileID: 1383981541}
+  SectionA: {fileID: 1843763275}
+  SectionB: {fileID: 1383981539}
 --- !u!1 &110022486
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +384,7 @@ GameObject:
   - component: {fileID: 173624409}
   - component: {fileID: 173624408}
   - component: {fileID: 173624407}
+  - component: {fileID: 173624410}
   m_Layer: 5
   m_Name: Controles
   m_TagString: Untagged
@@ -427,10 +457,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843763275}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 173624410}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: HideSection
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -438,18 +468,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 690008917}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &173624408
 MonoBehaviour:
@@ -489,6 +507,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173624405}
   m_CullTransparentMesh: 1
+--- !u!114 &173624410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173624405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38cbb7b5a05c28479376c32bc4a6031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SectionACanvas: {fileID: 1843763277}
+  SectionBCanvas: {fileID: 690008919}
+  SectionA: {fileID: 1843763275}
+  SectionB: {fileID: 690008917}
 --- !u!1 &286647635
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +672,7 @@ GameObject:
   - component: {fileID: 438723465}
   - component: {fileID: 438723464}
   - component: {fileID: 438723463}
+  - component: {fileID: 438723466}
   m_Layer: 5
   m_Name: Regresar
   m_TagString: Untagged
@@ -663,7 +698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 107.8, y: -48.3}
+  m_AnchoredPosition: {x: 107.80005, y: -48.30005}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &438723463
@@ -710,10 +745,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1383981539}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 438723466}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: HideSection
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -721,18 +756,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1843763275}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &438723464
 MonoBehaviour:
@@ -772,6 +795,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438723461}
   m_CullTransparentMesh: 1
+--- !u!114 &438723466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438723461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38cbb7b5a05c28479376c32bc4a6031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SectionACanvas: {fileID: 1383981541}
+  SectionBCanvas: {fileID: 1843763277}
+  SectionA: {fileID: 1383981539}
+  SectionB: {fileID: 1843763275}
 --- !u!1 &533890267
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +894,7 @@ GameObject:
   - component: {fileID: 598349821}
   - component: {fileID: 598349820}
   - component: {fileID: 598349819}
+  - component: {fileID: 598349822}
   m_Layer: 5
   m_Name: Regresar
   m_TagString: Untagged
@@ -880,7 +920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 107.8, y: -48.3}
+  m_AnchoredPosition: {x: 107.80005, y: -48.30005}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &598349819
@@ -927,10 +967,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 690008917}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 598349822}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: HideSection
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -938,18 +978,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1843763275}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &598349820
 MonoBehaviour:
@@ -989,6 +1017,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598349817}
   m_CullTransparentMesh: 1
+--- !u!114 &598349822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598349817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38cbb7b5a05c28479376c32bc4a6031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SectionACanvas: {fileID: 690008919}
+  SectionBCanvas: {fileID: 1843763277}
+  SectionA: {fileID: 690008917}
+  SectionB: {fileID: 1843763275}
 --- !u!1 &617318342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 690008918}
+  - component: {fileID: 690008919}
   m_Layer: 5
   m_Name: ControllersMenu
   m_TagString: Untagged
@@ -1292,6 +1337,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &690008919
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690008917}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &828142486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1465,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38cbb7b5a05c28479376c32bc4a6031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SectionACanvas: {fileID: 0}
+  SectionBCanvas: {fileID: 0}
+  SectionA: {fileID: 0}
+  SectionB: {fileID: 0}
 --- !u!1 &880891541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,13 +2306,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383981540}
+  - component: {fileID: 1383981541}
   m_Layer: 5
   m_Name: OptionsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1383981540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2274,6 +2336,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1383981541
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383981539}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1622983569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,13 +2662,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1843763276}
+  - component: {fileID: 1843763277}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1843763276
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2619,6 +2694,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1843763277
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843763275}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1847309254
 GameObject:
   m_ObjectHideFlags: 0
