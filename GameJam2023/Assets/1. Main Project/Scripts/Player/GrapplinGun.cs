@@ -13,26 +13,40 @@ public class GrapplinGun : MonoBehaviour {
     public LayerMask whatIsGrappleable, unlockGrappleable;
     public Transform gunTip, camera, player;
     private float maxDistance = 50f;
-    private SpringJoint joint;
+    private SpringJoint joint, joint2;
     public float maxCuerda = 0.8f;
     public float minCuerda = 0.25f;
     public float spring, damper, massScale;
     public Image crossHair;
     public GameObject meshObject;
-
+    public bool isFlower = false;
+    
+    
     void Awake() {
         lr = GetComponent<LineRenderer>();
         
     }
 
-    void Update() {
+    void Update() 
+    {
         if (Input.GetMouseButtonDown(0)) {
             StartGrapple();
-           
         }
+        
         
         else if (Input.GetMouseButtonUp(0)) {
             StopGrapple();
+        }
+        
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            ActiveByClick();
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            DestroyActive();
         }
         
         if (IsGrappling()) {
@@ -79,6 +93,33 @@ public class GrapplinGun : MonoBehaviour {
             currentGrapplePosition = gunTip.position;
 
             
+           /* if (hit.transform.GetComponent<PlatformUnlocker>() != null && isFlower == true)
+            {
+                hit.transform.GetComponent<PlatformUnlocker>().UnlockPlatforms();
+                hit.transform.GetComponent<DissolveScript>().StartCoroutine("MakeDissolve");
+            }*/
+        }
+    }
+    void ActiveByClick() {
+        RaycastHit hit;
+        if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrappleable)) {
+            grapplePoint = hit.point;
+            joint2 = player.gameObject.AddComponent<SpringJoint>();
+            joint2.autoConfigureConnectedAnchor = false;
+            joint2.connectedAnchor = grapplePoint;
+
+            
+
+            float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
+
+            //The distance grapple will try to keep from grapple point. 
+            joint2.maxDistance = distanceFromPoint * maxCuerda;
+            joint2.minDistance = distanceFromPoint * minCuerda;
+            
+            
+            currentGrapplePosition = gunTip.position;
+
+            
             if (hit.transform.GetComponent<PlatformUnlocker>() != null)
             {
                 hit.transform.GetComponent<PlatformUnlocker>().UnlockPlatforms();
@@ -86,8 +127,11 @@ public class GrapplinGun : MonoBehaviour {
             }
         }
     }
-        
-    
+
+    void DestroyActive()
+    {
+        Destroy(joint2);
+    }
 
     void StopGrapple() {
         lr.positionCount = 0;
