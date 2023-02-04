@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RotateGun : MonoBehaviour {
 
-    public GrapplingGun grappling;
+    /*public GrapplingGun grappling;
 
     private Quaternion desiredRotation;
     private float rotationSpeed = 5f;
@@ -17,5 +17,5 @@ public class RotateGun : MonoBehaviour {
 
         transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotation, Time.deltaTime * rotationSpeed);
     }
-
+*/
 }
