@@ -84,8 +84,6 @@ public class GrapplinGun : MonoBehaviour {
                 hit.transform.GetComponent<PlatformUnlocker>().UnlockPlatforms();
                 hit.transform.GetComponent<DissolveScript>().StartCoroutine("MakeDissolve");
             }
-            
-            
         }
     }
         
