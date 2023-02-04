@@ -1,4 +1,8 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
 
 public class GrapplinGun : MonoBehaviour {
 
@@ -6,11 +10,17 @@ public class GrapplinGun : MonoBehaviour {
     private Vector3 grapplePoint;
     public LayerMask whatIsGrappleable;
     public Transform gunTip, camera, player;
-    private float maxDistance = 100f;
+    private float maxDistance = 50f;
     private SpringJoint joint;
+    public float maxCuerda = 0.8f;
+    public float minCuerda = 0.25f;
+    public float spring, damper, massScale;
+    public Image crossHair;
+    
 
     void Awake() {
         lr = GetComponent<LineRenderer>();
+        
     }
 
     void Update() {
@@ -19,6 +29,15 @@ public class GrapplinGun : MonoBehaviour {
         }
         else if (Input.GetMouseButtonUp(0)) {
             StopGrapple();
+        }
+
+        if (IsGrappling()) {
+            
+            crossHair.GetComponent<Image>().color = Color.green;
+        }
+        else
+        {
+            crossHair.GetComponent<Image>().color = Color.red;
         }
     }
 
@@ -41,13 +60,14 @@ public class GrapplinGun : MonoBehaviour {
             float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
 
             //The distance grapple will try to keep from grapple point. 
-            joint.maxDistance = distanceFromPoint * 0.8f;
-            joint.minDistance = distanceFromPoint * 0.25f;
-
-            //Adjust these values to fit your game.
-            joint.spring = 8.5f;
-            joint.damper = 7f;
-            joint.massScale = 4.5f;
+            joint.maxDistance = distanceFromPoint * maxCuerda;
+            joint.minDistance = distanceFromPoint * minCuerda;
+            
+            
+            
+            joint.spring = spring;
+            joint.damper = damper;
+            joint.massScale = massScale;
 
             lr.positionCount = 2;
             currentGrapplePosition = gunTip.position;
