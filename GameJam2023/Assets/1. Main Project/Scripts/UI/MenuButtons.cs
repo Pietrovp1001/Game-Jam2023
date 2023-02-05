@@ -11,7 +11,6 @@ public class MenuButtons : MonoBehaviour
     public CanvasGroup SectionBCanvas;
     public GameObject SectionA;
     public GameObject SectionB;
-    public GameObject MenuFirstButton; 
 
     public void HideSection()
     {
@@ -28,8 +27,6 @@ public class MenuButtons : MonoBehaviour
         SectionACanvas.interactable = false; 
         yield return new WaitForSeconds(0.5f);
         SectionBCanvas.interactable = true;
-        var eventSystem = EventSystem.current;
-        eventSystem.SetSelectedGameObject(MenuFirstButton, new BaseEventData(eventSystem));
         SectionA.SetActive(false);
         SectionBCanvas.DOFade(1f, 0.5f).SetEase(Ease.InQuint);
     }
