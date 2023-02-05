@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public GameObject skipCinematic;
     public string sceneName;
     void Start()
     {
-        Time.timeScale = 1f; 
-        skipCinematic.SetActive(false);
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName); 
         
     }
