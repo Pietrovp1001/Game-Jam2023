@@ -20,6 +20,8 @@ public class GrapplinGun : MonoBehaviour {
     public Image crossHair;
     public GameObject meshObject;
     public bool isFlower = false;
+    public AudioSource audioSource;
+    public AudioClip shootRootSFX;
     
     
     void Awake() {
@@ -62,13 +64,14 @@ public class GrapplinGun : MonoBehaviour {
     void StartGrapple() {
         RaycastHit hit;
         if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrappleable)) {
+            audioSource.PlayOneShot(shootRootSFX);
             grapplePoint = hit.point;
             joint = player.gameObject.AddComponent<SpringJoint>();
             joint.autoConfigureConnectedAnchor = false;
             joint.connectedAnchor = grapplePoint;
-
             
-
+            
+        
             float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
 
             //The distance grapple will try to keep from grapple point. 
@@ -95,6 +98,7 @@ public class GrapplinGun : MonoBehaviour {
     void ActiveByClick() {
         RaycastHit hit;
         if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrappleable)) {
+          
             grapplePoint = hit.point;
             joint2 = player.gameObject.AddComponent<SpringJoint>();
             joint2.autoConfigureConnectedAnchor = false;
