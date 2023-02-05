@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b8a2a7e9f218fc045aa37889aa29b1ec
+guid: 02196642be6f0ff4a8f6f89cea96e0e4
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.004
-    second: {fileID: 2100000, guid: a3f562b0af35fd1498385da442159581, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: hojias
-    second: {fileID: 2100000, guid: 33a240429b34a0d4590b212087a1b24e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: hojitas vivas
-    second: {fileID: 2100000, guid: 8917aefa160d85640a4d8abc6d73c64d, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 91f833c34ed705849b2f9c300a5cf7dc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
