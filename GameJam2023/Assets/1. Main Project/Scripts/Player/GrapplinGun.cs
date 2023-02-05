@@ -49,14 +49,6 @@ public class GrapplinGun : MonoBehaviour {
             DestroyActive();
         }
         
-        if (IsGrappling()) {
-            
-            crossHair.GetComponent<Image>().color = Color.green;
-        }
-        else
-        {
-            crossHair.GetComponent<Image>().color = Color.red;
-        }
     }
 
     //Called after Update

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ledge
+  - Grap
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - UI
   - Ground
   - Blocked
-  - Unlockable
+  - Grap
   - 
   - 
   - 
