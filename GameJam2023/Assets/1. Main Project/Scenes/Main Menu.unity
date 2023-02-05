@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Environment artist, UI/UX designer, cinematic artist, sound designer, programmer.
+  m_text: 3D artist, concept artist, level designer, play tester.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1dd92e2063910d94ead01e9517b65637, type: 2}
   m_sharedMaterial: {fileID: 1722112344471747273, guid: 1dd92e2063910d94ead01e9517b65637,
@@ -1658,7 +1658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4f359a77f04d3d549bd84379dbf647e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3854,7 +3854,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: bc5c6db0c134f804d912b21bffea7517, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6564,7 +6564,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0eabd3bd67d76bb49bbb7388f4c393e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6723,7 +6723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6dbd4b03ff50053479240c145d88d641, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6833,7 +6833,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Programmer, level designer, 3D artist, environment artist.
+  m_text: '3D artist, rigger, animator. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1dd92e2063910d94ead01e9517b65637, type: 2}
   m_sharedMaterial: {fileID: 1722112344471747273, guid: 1dd92e2063910d94ead01e9517b65637,
@@ -10380,7 +10380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Muy Baja
+  m_text: Very low
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f93e730a868965f408ca0dbc3e4d2214, type: 2}
   m_sharedMaterial: {fileID: -3465079346589301797, guid: f93e730a868965f408ca0dbc3e4d2214,
