@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7029353290286387622
+--- !u!114 &-3486198769729599049
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,11 +20,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Dissolve 1
-  m_Shader: {fileID: -6465566751694194690, guid: 335383ae06371a34fa40b9fde6aa0265,
+  m_Name: Moon 1
+  m_Shader: {fileID: -6465566751694194690, guid: 716f8ec66c89e034483af21d50f99db1,
     type: 3}
-  m_ValidKeywords:
-  - _DIRECTION_ALL
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -49,15 +48,25 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DIRECTION: 0
-    - _DISSOLVE: 0.6
-    - _Dissolve: 0.97
-    - _Edge_Width: 0.509
-    - _Noise_Scale: 94.7
-    - _Noise_Strength: 1.43
+    - Vector1_0faf9565f3964f50bce98a329148fa91: 0
+    - Vector1_3885918611d9481497bdeab3ced083f8: 0.01
+    - Vector1_87f0e8e08a5e40aa9cba257f9996601b: -0.3
+    - Vector1_9ab9734743834cf3842959c683cd7be1: 77.95
+    - Vector1_9b6655a35cbd46249272a3ac35cf83c0: 8.06
+    - Vector1_aa2b152c968f43daadda83dc28f96934: 1
+    - Vector1_b27e810e566a4496a2709e22a93790ae: 0
+    - Vector1_b438108a84ea4fd4950e2fc9831a6908: 0
+    - Vector1_f4346caac0c24533843067b1caa8641a: 50
+    - Vector1_f4346caac0c24533843067b1caa8641a_1: -32.5
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0.43529412, g: 0.18564217, b: 0, a: 0}
-    - _Edge_Color: {r: 0.17469697, g: 0.022183742, b: 0, a: 0}
+    - Color_3ef1f66b4a4246a1a82c872d814a547a: {r: 19.512482, g: 17.775768, b: 15.22178,
+        a: 1}
+    - Color_adc979e474cd4c52803b73073550b88e: {r: 14.75652, g: 4.057205, b: 3.828343,
+        a: 0}
+    - Color_c4b6043ac1de492fb8bbd1482b723534: {r: 0.9716981, g: 0.70669955, b: 0.637104,
+        a: 0}
+    - Vector2_b3499b7416b64762a92801fd1a260104: {r: 1.74, g: 0, b: 0, a: 0}
+    - Vector2_d1261ba7c1e140be8ca68486b05912b4: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
