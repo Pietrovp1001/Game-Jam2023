@@ -2252,14 +2252,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533890267}
   m_LocalRotation: {x: 0.04446665, y: 0.7097016, z: 0.044967666, w: -0.70165825}
-  m_LocalPosition: {x: -1386.228, y: -680.37, z: 4.128}
+  m_LocalPosition: {x: -1387.4, y: -680.77, z: 4.428}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1020497940}
   m_Father: {fileID: 1370517875}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 8, y: 5, z: 6}
+  m_LocalEulerAnglesHint: {x: 5, y: 4, z: 8}
 --- !u!95 &533890270
 Animator:
   serializedVersion: 5
@@ -4508,6 +4508,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1991931645}
   - {fileID: 1274216586}
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -5041,7 +5042,7 @@ GameObject:
   - component: {fileID: 1274216586}
   - component: {fileID: 1274216587}
   m_Layer: 0
-  m_Name: 1. Start Cinematic
+  m_Name: 2. Start Cinematic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5060,7 +5061,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1027531015}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!320 &1274216587
 PlayableDirector:
@@ -5099,6 +5100,16 @@ PlayableDirector:
     value: {fileID: 2036191822}
   - key: {fileID: -3484623236202655002, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
     value: {fileID: 1377393184}
+  - key: {fileID: -9156536935608458066, guid: 10070d6de950a4c4f902c17920e717d1, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2714236157115307235, guid: 10070d6de950a4c4f902c17920e717d1, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4147597017052086588, guid: 10070d6de950a4c4f902c17920e717d1, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4332239594122931781, guid: 10070d6de950a4c4f902c17920e717d1, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3716072143817721629, guid: 10070d6de950a4c4f902c17920e717d1, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1285086735
@@ -5179,7 +5190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5622,7 +5633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361729734}
   m_LocalRotation: {x: 0.04446665, y: 0.7097016, z: 0.044967666, w: -0.70165825}
-  m_LocalPosition: {x: -1386.228, y: -680.37, z: 4.128}
+  m_LocalPosition: {x: -1387.4, y: -680.77, z: 4.428}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8579,6 +8590,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947112804}
   m_CullTransparentMesh: 1
+--- !u!1 &1991931644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991931645}
+  - component: {fileID: 1991931646}
+  m_Layer: 0
+  m_Name: BackCinematic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1991931645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991931644}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1027531015}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1991931646
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991931644}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 0520b11dea7b4ab4d9d3749bd0006d4f, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -1744997828051840483, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7354756094180112267, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1975329802169817863, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7932604102050823280, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3984028809570940005, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -303006475242092189, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3484623236202655002, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8192023926760822912, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8124056927106457057, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8818898915136281670, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2736289172984151938, guid: 9373ddfec2235f2448b172dc75e44189, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8682128439957360362, guid: 0520b11dea7b4ab4d9d3749bd0006d4f, type: 2}
+    value: {fileID: 533890270}
+  - key: {fileID: 4982261282306835550, guid: 0520b11dea7b4ab4d9d3749bd0006d4f, type: 2}
+    value: {fileID: 674186664}
+  - key: {fileID: 955218659949637974, guid: 0520b11dea7b4ab4d9d3749bd0006d4f, type: 2}
+    value: {fileID: 1898980903}
+  - key: {fileID: -2936495332453039575, guid: 0520b11dea7b4ab4d9d3749bd0006d4f, type: 2}
+    value: {fileID: 674186660}
+  - key: {fileID: 5170863904987831, guid: 0520b11dea7b4ab4d9d3749bd0006d4f, type: 2}
+    value: {fileID: 1898980899}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &2036191822
 GameObject:
   m_ObjectHideFlags: 0

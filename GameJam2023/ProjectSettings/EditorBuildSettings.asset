@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1. Main Project/Scenes/FinalCinematic.unity
     guid: e829c82e762b7494b9364d96a9ad99bb
+  - enabled: 1
+    path: Assets/1. Main Project/Scenes/version2MainMenu.unity
+    guid: 0c0cf235d4cfcff4ab85856f667fb3ab
   m_configObjects: {}
